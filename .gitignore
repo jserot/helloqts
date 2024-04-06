@@ -1,0 +1,10 @@
+.DS_Store
+*~
+*.o
+moc_*.*
+qrc_resources.*
+src/hello.app/
+dist/macos/*.app/
+dist/macos/*.dmg/
+dist/windows/*_setup.exe
+config
