@@ -16,19 +16,19 @@ build: $(MAKEFILE)
 	make -f $(MAKEFILE)
 
 run:
-ifeq ($(PLATFORM), qt6-ucrt64)
+ifeq ($(PLATFORM_TYPE), windows)
 	./release/$(APPNAME).exe
 endif
-ifeq ($(PLATFORM), qt5-macx86)
+ifeq ($(PLATFORM_TYPE), macos)
 	open ./$(APPNAME).app
 endif
 
 deploy:
-ifeq ($(PLATFORM), qt6-ucrt64)
+ifeq ($(PLATFORM_TYPE), windows)
 	(cd release; $(WINDEPLOYQT) $(APPNAME).exe)
 	cp $(EXTDLLS)/*.dll ./release
 endif
-ifeq ($(PLATFORM), qt5-macx86)
+ifeq ($(PLATFORM_TYPE), macos)
 	rm -rf $(DIST_DIR)/macos/$(APPNAME).app
 	cp -r $(APPNAME).app $(DIST_DIR)/macos
 endif
