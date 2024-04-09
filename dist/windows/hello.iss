@@ -12,7 +12,7 @@ OutputBaseFilename=hello_setup
 OutputDir=.
 
 [Files]
-Source: "..\..\src\release\*"; DestDir: "{app}"; Flags: recursesubdirs
+Source: "*"; DestDir: "{app}"; Flags: recursesubdirs; Excludes: "*~,Makefile,*.iss,*_setup.exe"
  
 [Icons]
 

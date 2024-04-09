@@ -12,4 +12,6 @@ clobber:
 	rm -f *~
 	rm -rf ./dist/macos/*.app
 	rm -rf ./dist/macos/*.dmg
-	rm -rf ./dist/windows/*_setup.exe # InnoSetup binary installer(s)
+	rm -f ./dist/windows/*.exe
+	rm -f ./dist/windows/*.dll
+	rm -rf ./dist/windows/{generic,imageformats,networkinformation,platforms,styles,tls,translations}
